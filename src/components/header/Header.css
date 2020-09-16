@@ -1,0 +1,21 @@
+.header {
+    background: #fff159;
+    position: relative;
+}
+
+.title {
+    color: #2D3277;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    height: 100px;
+    display: block;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.logo {
+    width: 200px;
+    position: absolute;
+    padding-top: 25px;
+    padding-left: 20px;
+}
