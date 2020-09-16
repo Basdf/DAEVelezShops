@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import InputBase from '@material-ui/core/InputBase';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import SearchIcon from '@material-ui/icons/Search';
+import { useDispatch } from 'react-redux';
+import searchAction from './../../actions/ProductStore'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -30,8 +32,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-
-export default function SearchBar() {
+export default function SearchBar(props) {
+    const dispatch = useDispatch()
     const capitalizar = string => {
         return string.trim().toLowerCase().replace(/\w\S*/g, (w) => (w.replace(/^\w/, (c) => c.toUpperCase())));
     }
@@ -39,16 +41,16 @@ export default function SearchBar() {
     const handleChange = e => {
         setSearchTerm(e.target.value);
     };
-    const search = async e => {
+
+    const search = useCallback(async e => {
         e.preventDefault();
-        var term=capitalizar(searchTerm);
-        document.title=term+' - Estos y mas productos en Velez Shops';
-        var response = await fetch('https://api.mercadolibre.com/sites/MCO/search?q=' + searchTerm  + '&offset=50');
+        var term = capitalizar(searchTerm);
+        document.title = term + ' - Estos y mas productos en Velez Shops';
+        var response = await fetch('https://api.mercadolibre.com/sites/MCO/search?q=' + searchTerm);
         var json = await response.json();
+        dispatch(searchAction(json))
 
-
-
-    }
+    }, [dispatch, searchTerm])
     const classes = useStyles();
     return (
         <>

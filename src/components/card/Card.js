@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import logo from "./../../assets/prueba1.webp"
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -34,31 +33,38 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function ProductCard() {
+export default function ProductCard(props) {
+    const [nickname, setnickname] = useState("");
+    useEffect(() => {
+        async function fetchData() {
+            var response = await fetch('https://api.mercadolibre.com/users/' + props.reseller);
+            var json = await response.json();
+            setnickname(json.nickname)  
+        }
+        fetchData();
+    }, [props.reseller]);
 
     const classes = useStyles()
+    const thumbnail = props.thumbnail
     return (
         <Card className={classes.root}>
             <CardMedia
                 className={classes.cover}
-                image={logo}
-                title="Live from space album cover"
+                image={thumbnail}
             />
             <div className={classes.details}>
                 <CardContent className={classes.content}>
                     <Typography component="h5" variant="h5">
-                        Live From Space
-                        </Typography>
-                    <Typography variant="subtitle1" color="textSecondary">
-                        Mac Miller
-                        </Typography>
+                        {props.title}
+                    </Typography>
                     <Typography variant="body1" color="textSecondary">
-                        Mac Miller
-                        </Typography>
+                        {props.price}
+                    </Typography>
+                    <Typography   variant="body1" color="textSecondary">
+                        {nickname}
+                    </Typography>
                 </CardContent>
-
             </div>
-
         </Card>
     )
 

@@ -13,8 +13,7 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.text.secondary,
     },
 }));
-export default function BodyGrid() {
-
+export default function BodyGrid(props) {
     const classes = useStyles();
     return (
         <>
@@ -22,12 +21,24 @@ export default function BodyGrid() {
                 <Grid container spacing={0}>
                     <Grid item xs={3}>
                         {/* poner filtro aqui */}
-                        <Card></Card>
+                        
                     </Grid>
                     <Grid item xs={9}>
                         {/* hacer for con la informacion y las tarjetas */}
-                        <Card></Card>
-                        <Card></Card>
+                        {
+                            props.response.data && props.response.json.results.map(product => {
+                                return (
+                                    <Card key={product.id} 
+                                    thumbnail={product.thumbnail}
+                                    title={product.title}
+                                    price={product.price}
+                                    reseller={product.seller.id}
+                                    id={product.id}
+                                    >
+
+                                    </Card>
+                                )
+                            })}
                     </Grid>
                 </Grid>
             </div>
