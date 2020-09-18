@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "febcfd5da429d23aa884c7aae1713836",
+    "revision": "6e73284d48caef9b342e6212ecb4ba14",
     "url": "/DAEVelezShops/index.html"
   },
   {
-    "revision": "adf155fd22f0fc2d93a5",
+    "revision": "925346994a3472b50dba",
     "url": "/DAEVelezShops/static/css/main.ab3e867b.chunk.css"
   },
   {
-    "revision": "80ae918dc3a63976692b",
-    "url": "/DAEVelezShops/static/js/2.fa5eac14.chunk.js"
+    "revision": "0ea4f090e649e37aa59e",
+    "url": "/DAEVelezShops/static/js/2.3d8a6281.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/DAEVelezShops/static/js/2.fa5eac14.chunk.js.LICENSE.txt"
+    "url": "/DAEVelezShops/static/js/2.3d8a6281.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "adf155fd22f0fc2d93a5",
-    "url": "/DAEVelezShops/static/js/main.55b0b51f.chunk.js"
+    "revision": "925346994a3472b50dba",
+    "url": "/DAEVelezShops/static/js/main.34a5a616.chunk.js"
   },
   {
     "revision": "097625dec041b100be05",
