@@ -51,7 +51,8 @@ export default function SearchBar() {
         document.title = term + ' - Estos y mas productos en Velez Shops';
 
         dispatch(searchAction(searchTerm))
-        history.push("/home");
+        history.push("/DAEVelezShops/home");
+
 
     }, [dispatch, searchTerm,history])
     const classes = useStyles();

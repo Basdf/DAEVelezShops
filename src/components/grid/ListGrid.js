@@ -4,10 +4,8 @@ import { useSelector } from 'react-redux';
 import Grid from '@material-ui/core/Grid';
 import Card from '../card/Card'
 import { Link } from 'react-router-dom';
-
-import Pagination from '@material-ui/lab/Pagination';
 import TablePagination from '@material-ui/core/TablePagination';
-import { Typography } from '@material-ui/core';
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -65,14 +63,21 @@ export default function ListGrid() {
                     <Grid container spacing={0}>
                         <Grid item xs={3}>
                             {/* poner filtro aqui */}
-                            
+                            {/* <div style={{margin:10}}>
+                                <Typography component="body1" variant="body1">
+                                    filtro 1
+                                </Typography>
+                                <Typography component="body1" variant="body1">
+                                    filtro 2
+                                </Typography>
+                            </div> */}
 
                         </Grid>
                         <Grid item xs={9}>
                             {
                                 listProduct.results.map(product => {
                                     return (
-                                        <Link key={product.id} style={{ textDecoration: 'none' }} to={"/product/" + product.id} >
+                                        <Link key={product.id} style={{ textDecoration: 'none' }} to={"/DAEVelezShops/product/" + product.id} >
                                             <Card
                                                 thumbnail={product.thumbnail}
                                                 title={product.title}
