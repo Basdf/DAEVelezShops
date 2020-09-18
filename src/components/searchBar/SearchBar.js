@@ -6,7 +6,9 @@ import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import SearchIcon from '@material-ui/icons/Search';
 import { useDispatch } from 'react-redux';
-import searchAction from './../../actions/ProductStore'
+import { searchAction } from './../../actions/ProductStore'
+import { useHistory } from 'react-router';
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -33,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function SearchBar(props) {
+    const history=useHistory() 
     const dispatch = useDispatch()
     const capitalizar = string => {
         return string.trim().toLowerCase().replace(/\w\S*/g, (w) => (w.replace(/^\w/, (c) => c.toUpperCase())));
@@ -49,11 +52,13 @@ export default function SearchBar(props) {
         var response = await fetch('https://api.mercadolibre.com/sites/MCO/search?q=' + searchTerm);
         var json = await response.json();
         dispatch(searchAction(json))
+        history.push("/home");
 
-    }, [dispatch, searchTerm])
+    }, [dispatch, searchTerm,history])
     const classes = useStyles();
     return (
         <>
+
             <Paper component="form" className={classes.root} onSubmit={search}>
                 <InputBase
                     className={classes.input}
@@ -62,9 +67,9 @@ export default function SearchBar(props) {
                     onChange={handleChange}
                 />
                 <Divider className={classes.divider} orientation="vertical" />
-                <IconButton className={classes.iconButton} onClick={search} >
-                    <SearchIcon />
-                </IconButton>
+                    <IconButton className={classes.iconButton} onClick={search} >
+                        <SearchIcon />
+                    </IconButton>
             </Paper>
         </>
     )

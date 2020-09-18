@@ -19,27 +19,18 @@ const useStyles = makeStyles((theme) => ({
         flex: '1 0 auto',
     },
     cover: {
-        width: 151,
-    },
-    controls: {
-        display: 'flex',
-        alignItems: 'center',
-        paddingLeft: theme.spacing(1),
-        paddingBottom: theme.spacing(1),
-    },
-    playIcon: {
-        height: 38,
-        width: 38,
+        width: 100,
+        backgroundSize: 'auto',
     },
 }));
 
 export default function ProductCard(props) {
-    const [nickname, setnickname] = useState("");
+    const [nickname, setNickname] = useState("");
     useEffect(() => {
         async function fetchData() {
             var response = await fetch('https://api.mercadolibre.com/users/' + props.reseller);
             var json = await response.json();
-            setnickname(json.nickname)  
+            setNickname(json.nickname)  
         }
         fetchData();
     }, [props.reseller]);

@@ -1,11 +1,29 @@
 const search = "SEARCH"
-const searchAction= (json)=>{
-    return{
+const home = "HOME"
+const sendProduct="SENTPRODUCT"
+const homeAction = () => {
+    return {
+        type: home,
+    }
+}
+const searchAction = (listProduct) => {
+    return {
         type: search,
         payload: {
-            json,
+            listProduct,
+        }
+    }
+}
+const sendProductAction=(product)=>{
+    return {
+        type: sendProduct,
+        payload: {
+            product,
         }
     }
 }
 
-export default searchAction
+export {searchAction}
+export {homeAction}
+export {sendProductAction}
+
