@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f3ca4078fcef30bde1a692b2cbcd1770",
+    "revision": "84f230bdc7d324fbe89624e321103596",
     "url": "/DAEVelezShops/index.html"
   },
   {
