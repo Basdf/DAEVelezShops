@@ -1,7 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ## Aplicativo alojado en Github Pages
 
-basdf.github.io/daevelezshops/
+[basdf.github.io/daevelezshops](https://basdf.github.io/DAEVelezShops/)
 
 ## Available Scripts
 
