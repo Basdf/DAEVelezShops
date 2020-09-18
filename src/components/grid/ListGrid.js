@@ -77,7 +77,7 @@ export default function ListGrid() {
                             {
                                 listProduct.results.map(product => {
                                     return (
-                                        <Link key={product.id} style={{ textDecoration: 'none' }} to={"/DAEVelezShops/product/" + product.id} >
+                                        <Link key={product.id} style={{ textDecoration: 'none' }} to={"/DAEVelezShops/" + product.id} >
                                             <Card
                                                 thumbnail={product.thumbnail}
                                                 title={product.title}
