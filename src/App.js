@@ -15,10 +15,10 @@ export default function App() {
         <Header></Header>
         <SearchBar></SearchBar>
         <Switch>
-          <Route exact path="/home" component={Home}></Route>
-          <Route exact path="/product/:id" component={ProductGrid}></Route>
+          <Route exact path="/DAEVelezShops/home" component={Home}></Route>
+          <Route exact path="/DAEVelezShops/product/:id" component={ProductGrid}></Route>
           <Route component={Home}>
-            <Redirect to="/home" />
+            <Redirect to="/DAEVelezShops/home" />
           </Route>
         </Switch>
 
