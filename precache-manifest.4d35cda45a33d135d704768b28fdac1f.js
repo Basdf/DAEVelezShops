@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7604c480712b5887f80ac65301aabf61",
+    "revision": "da8bcb3455901c41069514aa1ec3e839",
     "url": "/DAEVelezShops/index.html"
   },
   {
-    "revision": "b44e3410efb7bffd7f06",
+    "revision": "adf155fd22f0fc2d93a5",
     "url": "/DAEVelezShops/static/css/main.ab3e867b.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/DAEVelezShops/static/js/2.fa5eac14.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b44e3410efb7bffd7f06",
-    "url": "/DAEVelezShops/static/js/main.c8fc557b.chunk.js"
+    "revision": "adf155fd22f0fc2d93a5",
+    "url": "/DAEVelezShops/static/js/main.55b0b51f.chunk.js"
   },
   {
     "revision": "097625dec041b100be05",
