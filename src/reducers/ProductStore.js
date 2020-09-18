@@ -1,6 +1,6 @@
 const DefaultProductStore = {
     data: false,
-    listProduct: "",
+    query: "",
     product:""
 
 }
@@ -10,13 +10,13 @@ const ProductStore = (state = DefaultProductStore, action) => {
             return {
                 ...state,
                 data: true,
-                listProduct: action.payload.listProduct,
+                query: action.payload.query,
             }
         }
         case "HOME": {
             return {
                 data: false,
-                listProduct: "",
+                query: "",
                 product:"",
             }
         }

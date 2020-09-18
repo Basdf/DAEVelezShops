@@ -6,11 +6,11 @@ const homeAction = () => {
         type: home,
     }
 }
-const searchAction = (listProduct) => {
+const searchAction = (query) => {
     return {
         type: search,
         payload: {
-            listProduct,
+            query,
         }
     }
 }

@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function SearchBar(props) {
+export default function SearchBar() {
     const history=useHistory() 
     const dispatch = useDispatch()
     const capitalizar = string => {
@@ -49,9 +49,8 @@ export default function SearchBar(props) {
         e.preventDefault();
         var term = capitalizar(searchTerm);
         document.title = term + ' - Estos y mas productos en Velez Shops';
-        var response = await fetch('https://api.mercadolibre.com/sites/MCO/search?q=' + searchTerm);
-        var json = await response.json();
-        dispatch(searchAction(json))
+
+        dispatch(searchAction(searchTerm))
         history.push("/home");
 
     }, [dispatch, searchTerm,history])
@@ -62,7 +61,7 @@ export default function SearchBar(props) {
             <Paper component="form" className={classes.root} onSubmit={search}>
                 <InputBase
                     className={classes.input}
-                    placeholder="Search"
+                    placeholder="Buscar productos, marcas y más…"
                     value={searchTerm}
                     onChange={handleChange}
                 />

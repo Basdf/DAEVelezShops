@@ -30,13 +30,14 @@ export default function ProductCard(props) {
         async function fetchData() {
             var response = await fetch('https://api.mercadolibre.com/users/' + props.reseller);
             var json = await response.json();
-            setNickname(json.nickname)  
+            setNickname(json.nickname)
         }
         fetchData();
     }, [props.reseller]);
 
     const classes = useStyles()
     const thumbnail = props.thumbnail
+
     return (
         <Card className={classes.root}>
             <CardMedia
@@ -51,7 +52,7 @@ export default function ProductCard(props) {
                     <Typography variant="body1" color="textSecondary">
                         {props.price}
                     </Typography>
-                    <Typography   variant="body1" color="textSecondary">
+                    <Typography variant="body1" color="textSecondary">
                         {nickname}
                     </Typography>
                 </CardContent>
