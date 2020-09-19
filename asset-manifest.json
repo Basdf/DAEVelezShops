@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/DAEVelezShops/static/css/main.ab3e867b.chunk.css",
-    "main.js": "/DAEVelezShops/static/js/main.62ad785e.chunk.js",
-    "main.js.map": "/DAEVelezShops/static/js/main.62ad785e.chunk.js.map",
+    "main.js": "/DAEVelezShops/static/js/main.9ddba29e.chunk.js",
+    "main.js.map": "/DAEVelezShops/static/js/main.9ddba29e.chunk.js.map",
     "runtime-main.js": "/DAEVelezShops/static/js/runtime-main.f31d1f54.js",
     "runtime-main.js.map": "/DAEVelezShops/static/js/runtime-main.f31d1f54.js.map",
-    "static/js/2.3d8a6281.chunk.js": "/DAEVelezShops/static/js/2.3d8a6281.chunk.js",
-    "static/js/2.3d8a6281.chunk.js.map": "/DAEVelezShops/static/js/2.3d8a6281.chunk.js.map",
+    "static/js/2.55232433.chunk.js": "/DAEVelezShops/static/js/2.55232433.chunk.js",
+    "static/js/2.55232433.chunk.js.map": "/DAEVelezShops/static/js/2.55232433.chunk.js.map",
     "index.html": "/DAEVelezShops/index.html",
-    "precache-manifest.908e55346a2f002378e415cb3530cd4e.js": "/DAEVelezShops/precache-manifest.908e55346a2f002378e415cb3530cd4e.js",
+    "precache-manifest.bcba62866f65e1f7a503241881fedffd.js": "/DAEVelezShops/precache-manifest.bcba62866f65e1f7a503241881fedffd.js",
     "service-worker.js": "/DAEVelezShops/service-worker.js",
     "static/css/main.ab3e867b.chunk.css.map": "/DAEVelezShops/static/css/main.ab3e867b.chunk.css.map",
-    "static/js/2.3d8a6281.chunk.js.LICENSE.txt": "/DAEVelezShops/static/js/2.3d8a6281.chunk.js.LICENSE.txt"
+    "static/js/2.55232433.chunk.js.LICENSE.txt": "/DAEVelezShops/static/js/2.55232433.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f31d1f54.js",
-    "static/js/2.3d8a6281.chunk.js",
+    "static/js/2.55232433.chunk.js",
     "static/css/main.ab3e867b.chunk.css",
-    "static/js/main.62ad785e.chunk.js"
+    "static/js/main.9ddba29e.chunk.js"
   ]
 }
