@@ -98,7 +98,7 @@ export default function ListGrid() {
                     <TablePagination
                         className={classes.pagination}
                         component="div"
-                        count={listProduct.paging.total}
+                        count={1000}
                         page={page}
                         onChangePage={handleChangePage}
                         rowsPerPage={rowsPerPage}
