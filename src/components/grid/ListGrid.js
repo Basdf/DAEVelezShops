@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Card from '../card/Card'
 import { Link } from 'react-router-dom';
 import TablePagination from '@material-ui/core/TablePagination';
+import { Typography } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -36,8 +37,8 @@ export default function ListGrid() {
     const [rowsPerPage, setRowsPerPage] = useState(50);
     useEffect(() => {
         async function fetchData() {
-
-            var response = await fetch('https://api.mercadolibre.com/sites/MCO/search?q=' + state.query + '&offset=' + (page * rowsPerPage) + '&limit=' + rowsPerPage);
+            var url = 'https://api.mercadolibre.com/sites/MCO/search?q=' + state.query + '&offset=' + (page * rowsPerPage) + '&limit=' + rowsPerPage
+            var response = await fetch(url);
             var json = await response.json();
             setListProduct(json)
         }
@@ -62,10 +63,11 @@ export default function ListGrid() {
                 <div className={classes.root}>
                     <Grid container spacing={0}>
                         <Grid item xs={3}>
-                            {/* poner filtro aqui */}
-                            {/* <div style={{margin:10}}>
-                                <Typography component="body1" variant="body1">
-                                    filtro 1
+                            {/* hacer el filtro usando la busqueda de search 
+                            para obtener los filtros, el id del filtro es id que da el json */}
+                            {/* <div style={{ margin: 10 }}>
+                                <Typography variant="h5">
+                                    Ordenar publicaciones
                                 </Typography>
                                 <Typography component="body1" variant="body1">
                                     filtro 2
@@ -103,9 +105,6 @@ export default function ListGrid() {
                         rowsPerPageOptions={[10, 30, 50]}
                         onChangeRowsPerPage={handleChangeRowsPerPage}
                     />
-                    {/* <div className={classes.pagination}>
-                        <Pagination count={100} size="large" page={page} onChange={handleChange} />
-                    </div> */}
                 </div>
             }
 
