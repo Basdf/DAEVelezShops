@@ -9,8 +9,6 @@ import ProductGrid from './components/grid/ProductGrid';
 
 export default function App() {
   return (
-    <>
-
       <BrowserRouter>
         <Header></Header>
         <SearchBar></SearchBar>
@@ -21,9 +19,7 @@ export default function App() {
             <Redirect to="/DAEVelezShops/" />
           </Route>
         </Switch>
-
       </BrowserRouter>
-    </>
   );
 
 }
